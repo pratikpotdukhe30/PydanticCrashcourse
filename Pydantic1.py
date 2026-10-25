@@ -1,11 +1,25 @@
 from pydantic import BaseModel
-
+#Does also type coercian understands '30' is 30
 class Patient(BaseModel):
     name: str
     age: int
 
 
-patient = Patient(name="Shardul", age="thirty")
+patient = Patient(name="Shardul", age="30")
+
+patient_info = {"name": "Pratik", "age": 26}
+
+patient2 = Patient(**patient_info)
+
+"""
+** unpacks a dictionary into named arguments.
+
+patient_info = {"name": "Pratik", "age": 26}
+
+Patient(**patient_info)
+# is exactly the same as
+Patient(name="Pratik", age=26)
+"""
 
 def update_patient_data(patient: Patient):
     print("Inserting patient data")
@@ -14,20 +28,17 @@ def update_patient_data(patient: Patient):
     print("Patient data updated")
 
 
-update_patient_data(patient)
+update_patient_data(patient2)
 
 """
 OUTPUT 
 
 (Pydantic) PS C:\Pratik\AI_Study\AgenticAI\Pydantic> py .\Pydantic1.py
-Traceback (most recent call last):
-  File "C:\Pratik\AI_Study\AgenticAI\Pydantic\Pydantic1.py", line 8, in <module>
-    patient = Patient(name="Shardul", age="thirty")
-  File "C:\Pratik\AI_Study\AgenticAI\Pydantic\.venv\Lib\site-packages\pydantic\main.py", line 280, in __init__
-    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
-pydantic_core._pydantic_core.ValidationError: 1 validation error for Patient
-age                                                                                                                                                                                 
-  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='thirty', input_type=str]                                                    
-    For further information visit https://errors.pydantic.dev/2.14/v/int_parsing      
+C:\Pratik\AI_Study\AgenticAI\Pydantic\Pydantic1.py:26: SyntaxWarning: "\P" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\P"? A raw string is also an option.
+  (Pydantic) PS C:\Pratik\AI_Study\AgenticAI\Pydantic> py .\Pydantic1.py
+Inserting patient data
+Name:  Pratik
+Age:  26
+Patient data updated   
 
 """
