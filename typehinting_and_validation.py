@@ -2,12 +2,16 @@
 
 def insert_patient_data(name: str, age: int):
     if type(name) is str and type(age) is int:
-        print("Inserting patient data")
-        print("Name: ", name)
-        print("Age: ", age)
-        print("Patient data inserted")
+        if(age > 0 and age < 100):
+            print("Inserting patient data")
+            print("Name: ", name)
+            print("Age: ", age)
+            print("Patient data inserted")
+        else:
+            raise TypeError("Not valid age")
     else:
-        raise TypeError("Not valid format")
+        raise TypeError("Not valid input")
+
 
 
 
@@ -19,10 +23,8 @@ def update_patient_data(name: str, age: int):
         print("Patient data updated")
 
 
-insert_patient_data("Shardul", 26)
-
-
-insert_patient_data("Shardul", "twenty-six")
+insert_patient_data("Shardul", 101)
+#insert_patient_data("Shardul", "twenty-six")
 
 """ Output
 Inserting patient data
