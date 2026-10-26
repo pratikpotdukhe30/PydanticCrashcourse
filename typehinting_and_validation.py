@@ -2,7 +2,7 @@
 
 def insert_patient_data(name: str, age: int):
     if type(name) is str and type(age) is int:
-        if(age > 0 and age < 100):
+        if  0 < age < 100:
             print("Inserting patient data")
             print("Name: ", name)
             print("Age: ", age)
