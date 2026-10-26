@@ -1,0 +1,44 @@
+[
+  {
+    "company": "Revolut",
+    "role": "Graduate Software Engineer (Java)",
+    "job_url": "https://www.revolut.com/careers",
+    "recruiter_email": "talent@revolut.com",
+    "status": "Applied",
+    "salary": null,
+    "applied_on": "2026-10-20",
+    "location": {
+      "city": "Lisbon",
+      "country": "Portugal"
+    },
+    "days_since_applied": 6
+  },
+  {
+    "company": "Imc Trading",
+    "role": "Graduate Software Engineer (2027)",
+    "job_url": "https://www.imc.com/eu/careers",
+    "recruiter_email": null,
+    "status": "Assessment",
+    "salary": null,
+    "applied_on": "2026-10-15",
+    "location": {
+      "city": "Amsterdam",
+      "country": "Netherlands"
+    },
+    "days_since_applied": 11
+  },
+  {
+    "company": "Bending Spoons",
+    "role": "Graduate Software Engineer",
+    "job_url": "https://jobs.bendingspoons.com/",
+    "recruiter_email": "hr@bendingspoons.com",
+    "status": "Offer",
+    "salary": 70000,
+    "applied_on": "2026-09-01",
+    "location": {
+      "city": "Milan",
+      "country": "Italy"
+    },
+    "days_since_applied": 55
+  }
+]
